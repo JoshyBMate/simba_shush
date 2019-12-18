@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button class="activate" type="button" name="activate">Simba Killer</button>
+    <button class="stop" type="button" name="Stop">Simba Reviver</button>
+    <audio src="Dog_Whistle.mp3">
+
+    </audio>
+    <script type="text/javascript">
+      var activate = document.querySelector(".activate");
+      var stop = document.querySelector(".stop");
+
+      activate.addEventListener("click",function(){
+        var audio = document.querySelector("audio");
+        audio.play();
+      });
+
+      stop.addEventListener("click",function(){
+        var audio = document.querySelector("audio");
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    </script>
+  </body>
+</html>
